@@ -1,0 +1,372 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#include ""res\\UIforETW.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""      // Standard components\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""afxribbon.rc""   // MFC ribbon and control bar resources\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\UIforETW.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 82
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "About UI for ETW"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    CONTROL         "UI for ETW",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_GROUP,42,14,114,8
+    CONTROL         "Copyright 2015 Google Inc. All Rights Reserved.",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | WS_GROUP,42,26,162,8
+    DEFPUSHBUTTON   "OK",IDOK,208,61,50,14,WS_GROUP
+    CONTROL         "Initially/mostly written by Bruce Dawson",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | WS_GROUP,42,38,162,8
+    CONTROL         "Build date goes here",IDC_BUILDDATE,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,42,50,217,8
+END
+
+IDD_UIFORETW_DIALOG DIALOGEX 0, 0, 569, 221
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "UI for ETW"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Start &Tracing (Ctrl+Win+R)",IDC_STARTTRACING,7,7,95,14
+    PUSHBUTTON      "Sa&ve Trace Buffers (Ctrl+Win+R)",IDC_SAVETRACEBUFFERS,105,7,115,14
+    PUSHBUTTON      "Cance&l Tracing",IDC_STOPTRACING,223,7,56,14
+    DEFPUSHBUTTON   "UnusedDefaultButton",IDC_UNUSEDDEFAULTBUTTON,287,7,84,14,NOT WS_VISIBLE
+    PUSHBUTTON      "&Settings...",IDC_SETTINGS,399,7,50,14
+    PUSHBUTTON      "About",IDC_ABOUT,455,7,50,14
+    EDITTEXT        IDC_OUTPUT,7,24,453,110,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "Close",IDOK,512,7,50,14
+    CONTROL         "&Compress Trace",IDC_COMPRESSTRACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,464,24,67,10
+    CONTROL         "Context s&witch call stacks",IDC_CONTEXTSWITCHCALLSTACKS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,464,36,98,10
+    CONTROL         "CP&U sampling call stacks",IDC_CPUSAMPLINGCALLSTACKS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,464,48,93,10
+    CONTROL         "&Fast sampling",IDC_FASTSAMPLING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,464,60,59,10
+    CONTROL         "&GPU tracing",IDC_GPUTRACING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,464,72,53,10
+    CONTROL         "&Input tracing:",IDC_INPUTTRACING_LABEL,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,464,99,45,8
+    COMBOBOX        IDC_INPUTTRACING,511,97,51,127,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TRACINGMODE,464,116,98,133,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "S&how commands",IDC_SHOWCOMMANDS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,464,133,69,10
+    CONTROL         "T&races:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,135,36,8
+    LISTBOX         IDC_TRACELIST,7,146,227,68,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Trace inform&ation:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,239,135,69,8
+    EDITTEXT        IDC_TRACENOTES,239,146,323,68,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_TRACENAMEEDIT,75,144,160,14,ES_AUTOHSCROLL | ES_WANTRETURN | NOT WS_VISIBLE | NOT WS_TABSTOP
+    CONTROL         "CLR traci&ng",IDC_CLRTRACING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,464,84,53,10
+    CONTROL         "Trace size:",IDC_TRACESIZE,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,94,135,76,8
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 401, 216
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "&Heap-profiled processes:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,9,94,8
+    EDITTEXT        IDC_HEAPEXE,102,7,133,14,ES_AUTOHSCROLL
+    CONTROL         "&WS monitored processes:",IDC_WS_MONITOR_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,25,94,8
+    EDITTEXT        IDC_WSMONITOREDPROCESSES,102,22,133,14,ES_AUTOHSCROLL
+    CONTROL         "E&xpensive working set monitoring",IDC_EXPENSIVEWS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,39,123,10
+    CONTROL         "Extra kernel &flags:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,58,92,8
+    EDITTEXT        IDC_EXTRAKERNELFLAGS,102,56,133,14,ES_AUTOHSCROLL
+    CONTROL         "Extra &kernel stackwalks:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,75,92,8
+    EDITTEXT        IDC_EXTRASTACKWALKS,102,73,133,14,ES_AUTOHSCROLL
+    CONTROL         "Extra &user mode providers:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,93,92,8
+    EDITTEXT        IDC_EXTRAUSERMODEPROVIDERS,102,91,133,14,ES_AUTOHSCROLL
+    CONTROL         "Perf counters:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,112,52,8
+    PUSHBUTTON      "Se&lect...",IDC_SELECT_PERF_COUNTERS,61,109,38,14
+    EDITTEXT        IDC_PERFORMANCECOUNTERS,102,109,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Copy startup profiles",IDC_COPYSTARTUPPROFILE,7,126,75,14
+    CONTROL         "&Background monitoring",IDC_BACKGROUND_MONITORING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,147,89,10
+    CONTROL         "&Identify Chrome CPU",IDC_IDENTIFY_CHROME_CPU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,160,83,10
+    CONTROL         "Record pre-trace",IDC_RECORD_PRE_TRACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,173,71,10
+    CONTROL         "Use other kernel logger",IDC_USE_OTHER_KERNEL_LOGGER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,186,91,10
+    CONTROL         "Record trace command",IDC_RECORD_TRACE_COMMAND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,199,89,10
+    CONTROL         "Ch&rome developer",IDC_CHROMEDEVELOPER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,103,134,75,10
+    CONTROL         "&Auto view traces",IDC_AUTOVIEWTRACES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,103,147,70,10
+    CONTROL         "&Stacks on heap tracing",IDC_HEAPSTACKS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,103,160,89,10
+    CONTROL         "&VirtualAlloc stacks always",IDC_VIRTUALALLOCSTACKS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,103,173,97,10
+    CONTROL         "Check for new versions",IDC_CHECKFORNEWVERSIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,103,186,105,10
+    CONTROL         "Trace &JavaScript",IDC_TRACEJAVASCRIPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,103,199,105,10
+    CONTROL         "Chrome tracing cate&gories:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,245,7,131,8
+    LISTBOX         IDC_CHROME_CATEGORIES,245,18,149,174,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,286,195,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,344,195,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "RandomASCII"
+            VALUE "FileDescription", "UI for ETW"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "UIforETW.exe"
+            VALUE "LegalCopyright", "RandomASCII"
+            VALUE "OriginalFilename", "UIforETW.exe"
+            VALUE "ProductName", "UI for ETW"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_UIFORETW_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 562
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 394
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 209
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRACESCONTEXTMENU MENU
+BEGIN
+    POPUP "Traces"
+    BEGIN
+        MENUITEM "Open trace in &WPA\tCtrl+E",  ID_TRACES_OPENTRACEIN10WPA
+        MENUITEM "Open trace in &GPUView\tCtrl+G", ID_TRACES_OPENTRACEINGPUVIEW
+        MENUITEM "Open trace in Media e&Xperience Analyzer", ID_TRACES_OPENTRACEINEXPERIENCEANALYZER
+        MENUITEM "&Delete trace\tDelete",       ID_TRACES_DELETETRACE
+        MENUITEM "&Rename trace\tF2",           ID_TRACES_RENAMETRACE
+        MENUITEM "&Browse folder",              ID_TRACES_BROWSEFOLDER
+        MENUITEM "Trace path to &clipboard\tCtrl+C", ID_TRACES_TRACEPATHTOCLIPBOARD
+        POPUP "Trace compression"
+        BEGIN
+            MENUITEM "&ETW compress trace (Win 8.0+)", ID_TRACES_COMPRESSTRACE
+            MENUITEM "&Zip compress trace",         ID_TRACES_ZIPCOMPRESSTRACE
+            MENUITEM "ETW Compress all &traces (Win 8.0+)", ID_TRACES_COMPRESSTRACES
+            MENUITEM "Zip compress all traces",     ID_TRACES_ZIPCOMPRESSALLTRACES
+        END
+        POPUP "&Scripts"
+        BEGIN
+            MENUITEM "&Identify Chrome processes",  ID_TRACES_IDENTIFYCHROMEPROCESSES
+            MENUITEM "Identify Chrome processes, with &CPU", ID_TRACES_IDENTIFYCHROMEPROCESSESWITHCPU
+            MENUITEM SEPARATOR
+            MENUITEM "&Strip Chrome symbols",       ID_TRACES_STRIPCHROMESYMBOLS
+            MENUITEM "Create &flame graph",         ID_SCRIPTS_CREATEFLAMEGRAPH
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATORS ACCELERATORS
+BEGIN
+    VK_ESCAPE,      ID_ESCKEY,              VIRTKEY, NOINVERT
+    VK_F2,          ID_RENAME,              VIRTKEY, NOINVERT
+    VK_F2,          ID_RENAMEFULL,          VIRTKEY, SHIFT, NOINVERT
+    "^E",           ID_TRACES_OPENTRACEIN10WPA, ASCII, NOINVERT
+    "^G",           ID_TRACES_OPENTRACEINGPUVIEW, ASCII, NOINVERT
+END
+
+IDR_RENAMEACCELERATORS ACCELERATORS
+BEGIN
+    VK_RETURN,      ID_ENDRENAME,           VIRTKEY, NOINVERT
+END
+
+IDR_NOTESACCELERATORS ACCELERATORS
+BEGIN
+    "^A",           ID_SELECTALL,           ASCII,  NOINVERT
+    "^V",           ID_PASTEOVERRIDE,       ASCII,  NOINVERT
+END
+
+IDR_TRACESACCELERATORS ACCELERATORS
+BEGIN
+    "^C",           ID_COPYTRACENAME,       ASCII,  NOINVERT
+    VK_DELETE,      ID_DELETETRACE,         VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_UIFORETW_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SETTINGS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About UI for ETW..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#include "res\UIforETW.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"      // Standard components
+#if !defined(_AFXDLL)
+#include "afxribbon.rc"   // MFC ribbon and control bar resources
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
